@@ -13,7 +13,7 @@ func main() {
 	err := smtp.SendMail(
 		/* endereço do servidor SMTP */ "pop.gmail.com:995",
 		/* mecanismo de autenticação */ smtp.PlainAuth("", "email", "senha", "pop.gmail.com"),
-		/* email de origem */ "ribeiro.lucyanno@gmail.com",
+		/* email de origem */ "email",
 		/* mensagem do RFC */ recipients,
 		/* corpo do email */ []byte("Subject:Olá!\n\n Olá Luciano. Tudo de bom com Go, teste enviado!"))
 	if err != nil {
